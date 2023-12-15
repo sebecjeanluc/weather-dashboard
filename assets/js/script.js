@@ -14,6 +14,7 @@ searchButton.on('click', function (event) {
 	todaySection.empty()
 
 	let searchValue = searchInput.val().toUpperCase()
+	historyDiv.empty()
 	searchHistoryArray.push(searchValue)
 	console.log(searchHistoryArray)
 

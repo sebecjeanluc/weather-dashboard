@@ -15,23 +15,23 @@ The project involves creating a browser-based weather dashboard that dynamically
 
 ### Roadmap
 
-- [] Create a weather dashboard with form inputs for city search.
-- [] Implement functionality to show current and future weather conditions when a city is searched.
-- [] Add searched cities to a search history.
+- [x] Create a weather dashboard with form inputs for city search.
+- [x] Implement functionality to show current and future weather conditions when a city is searched.
+- [x] Add searched cities to a search history.
 - [] Display current weather conditions for the selected city, including:
-  - [] City name
+  - [x] City name
   - [] Date
   - [] Icon representing weather conditions
-  - [] Temperature
-  - [] Humidity
-  - [] Wind speed
+  - [x] Temperature
+  - [x] Humidity
+  - [x] Wind speed
 - [] Show a 5-day forecast for the selected city, featuring:
   - [] Date
   - [] Icon representing weather conditions
   - [] Temperature
   - [] Humidity
 - [] Enable functionality to click on a city in the search history to view its current and future weather conditions again.
-- [] Uses the OpenWeather API
+- [x] Uses the OpenWeather API
 - [] localStorage to store the search history
 
 ### Mock-up
