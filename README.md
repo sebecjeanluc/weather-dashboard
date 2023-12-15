@@ -36,7 +36,7 @@ The project involves creating a browser-based weather dashboard that dynamically
 
 ### Mock-up
 
-![The weather app includes a search option, a list of cities, and a five-day forecast and current weather conditions for London.](./assets/images/10-server-side-apis-challenge-demo.png)
+![The weather app includes a search option, a list of cities, and a five-day forecast and current weather conditions for London.](./assets/images/guide/10-server-side-apis-challenge-demo.png)
 
 ### Important note
 

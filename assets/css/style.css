@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+.weatherDashboard h3 {
+	font-weight: bold;
+}
+
+.weather-header {
+	height: 75px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgb(2, 0, 36);
+	background: linear-gradient(
+		321deg,
+		rgba(2, 0, 36, 1) 0%,
+		rgba(9, 9, 121, 1) 35%,
+		rgba(0, 212, 255, 1) 100%
+	);
+}
+
+.weather-header h1 {
+	font-size: 40px;
+	font-weight: bold;
+	color: white;
+}
+
+.weather-search {
+	height: 50px;
+}
+
+.input-group-append {
+	margin: 10px 0;
+}
+
+.search-button {
+	width: 100%;
+}
+
+.today__wrapper {
+	border: 1px solid black;
+	padding: 10px;
+}
