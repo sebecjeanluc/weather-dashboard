@@ -78,38 +78,59 @@ searchButton.on('click', function (event) {
 			let humidity = data.list[0].main.humidity
 			let humidityElement = $('<p>')
 			humidityElement.addClass('my-3 text-black-50')
-			humidityElement.text('Humidity: ' + humidity + ' KPH')
+			humidityElement.text('Humidity: ' + humidity + ' %')
 			todaySection.append(humidityElement)
 
 			// 5 days forecast
+			let cardHeader = $('<h3>').text('5-DAY Forecast for ' + cityName + ': ')
 			let cardWrapper = $('<div>')
 			cardWrapper.attr('class', 'card__wrapper')
-			let cardHeader = $('<h3>').text('5-DAY Forecast For ' + cityName + ': ')
-			let cardItem = $('<div>')
-			cardItem.attr('class', 'card-item')
-			let cardItemDate = $('<h5>').text('18/12/2022')
-			let cardItemEmoji = $('<img>')
-			cardItemEmoji.attr('src', weatherEmojiURL)
-			let cardItemTemp = $('<p>').text('Temp: ' + '5.5' + ' °C')
-			let cardItemWind = $('<p>').text('Wind: ' + '2.76' + ' KPH')
-			let cardItemHumidity = $('<p>').text('Humidity: ' + '44' + ' KPH')
-			cardItem.append(
-				cardItemDate,
-				cardItemEmoji,
-				cardItemTemp,
-				cardItemWind,
-				cardItemHumidity
-			)
-			cardWrapper.append(cardItem)
-			forecastSection.prepend(cardHeader, cardWrapper)
 
-			let selectedData = []
-			let lastDate = null
+			// initializing day data putting data every 8th of data
+			let day_data = []
+
 			let weatherList = data.list
-			console.log(weatherList)
+			// console.log(weatherList)
 			for (i = 0; i < weatherList.length; i++) {
-				let forecastDate = new Date(weatherList[i].dt_txt).getDate()
-				console.log(forecastDate)
+				// you push the 8th item into array
+				if (i % 8 === 0) {
+					day_data.push(weatherList[i])
+				}
+			}
+			console.log(day_data)
+
+			// loop the day data to print the result
+			for (i = 0; i < day_data.length; i++) {
+				let day_dataDate = new Date(day_data[i].dt_txt)
+				day_dataDate = dayjs().format('DD/MM/YYYY')
+
+				let cardItem = $('<div>')
+				cardItem.attr('class', 'card-item')
+				let cardItemDate = $('<h5>').text(day_dataDate)
+				let cardItemEmoji = $('<img>')
+				let day_dataEmojiLoop = day_data[i].weather[0].icon
+				let weatherEmojiURLLoop =
+					'https://openweathermap.org/img/w/' + day_dataEmojiLoop + '.png'
+
+				cardItemEmoji.attr('src', weatherEmojiURLLoop)
+				let cardItemTemp = $('<p>').text(
+					'Temp: ' + day_data[i].main.temp + ' °C'
+				)
+				let cardItemWind = $('<p>').text(
+					'Wind: ' + day_data[i].wind.speed + ' KPH'
+				)
+				let cardItemHumidity = $('<p>').text(
+					'Humidity: ' + day_data[i].main.humidity + ' %'
+				)
+				cardItem.append(
+					cardItemDate,
+					cardItemEmoji,
+					cardItemTemp,
+					cardItemWind,
+					cardItemHumidity
+				)
+				cardWrapper.append(cardItem)
+				forecastSection.prepend(cardHeader, cardWrapper)
 			}
 		})
 })

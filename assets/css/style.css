@@ -51,7 +51,7 @@ body {
 }
 
 #forecast h3 {
-	font-size: 24px;
+	font-size: 18px;
 	padding: 10px 12px;
 }
 
@@ -62,7 +62,7 @@ body {
 
 .card-item {
 	display: block;
-	width: 250px;
+	width: 180px;
 	background: rgb(48, 48, 80);
 	color: white;
 	border-radius: 10px;
