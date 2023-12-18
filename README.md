@@ -20,8 +20,8 @@ The project involves creating a browser-based weather dashboard that dynamically
 - [x] Add searched cities to a search history.
 - [] Display current weather conditions for the selected city, including:
   - [x] City name
-  - [] Date
-  - [] Icon representing weather conditions
+  - [x] Date
+  - [x] Icon representing weather conditions
   - [x] Temperature
   - [x] Humidity
   - [x] Wind speed

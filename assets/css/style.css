@@ -4,7 +4,12 @@ body {
 	font-family: 'Roboto', sans-serif;
 }
 
-.weatherDashboard h3 {
+.h3__wrapper {
+	display: flex;
+	align-items: center;
+}
+
+.h3__wrapper h3 {
 	font-weight: bold;
 }
 
@@ -43,4 +48,31 @@ body {
 .today__wrapper {
 	border: 1px solid black;
 	padding: 10px;
+}
+
+#forecast h3 {
+	font-size: 24px;
+	padding: 10px 12px;
+}
+
+.card__wrapper {
+	display: flex;
+	justify-content: space-between;
+}
+
+.card-item {
+	display: block;
+	width: 250px;
+	background: rgb(48, 48, 80);
+	color: white;
+	border-radius: 10px;
+	padding: 10px 10px;
+}
+
+.card-item h5 {
+	padding: 5px 0;
+}
+
+.card-item p {
+	padding: 5px 0;
 }
