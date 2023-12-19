@@ -36,7 +36,6 @@ The project involves creating a browser-based weather dashboard that dynamically
 - [x] LocalStorage to store the search history
 - [] Refator the variable name and logic
 - [] Deploy the app to github page
-- [] After search button, the history button does not work.
 
 ### Mock-up
 
@@ -52,7 +51,7 @@ In terms of providing a 5-day weather forecast, one option is to average key dat
 
 #### This is the Github page
 
-[work-day-scheduler](https://sebecjeanluc.github.io/work-day-scheduler/)
+[weather-dashboard](https://sebecjeanluc.github.io/weather-dashboard/)
 
 ### Credits
 
