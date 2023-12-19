@@ -163,8 +163,8 @@ function showForecast(cityName, selectedDayData) {
 	// loop the day data to print the result
 	for (i = 0; i < selectedDayData.length; i++) {
 		let day_dataDate = new Date(selectedDayData[i].dt_txt)
-		day_dataDate = dayjs().format('DD/MM/YYYY')
-
+		day_dataDate = dayjs(day_dataDate).format('DD/MM/YYYY')
+		// console.log(day_dataDate)
 		let cardItem = $('<div>')
 		cardItem.attr('class', 'card-item')
 		let cardItemDate = $('<h5>').text(day_dataDate)

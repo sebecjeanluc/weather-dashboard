@@ -69,7 +69,7 @@ body {
 
 .card-item {
 	display: block;
-	width: 180px;
+	width: 140px;
 	background: rgb(48, 48, 80);
 	color: white;
 	border-radius: 10px;
@@ -87,4 +87,26 @@ body {
 .warning-text {
 	color: red;
 	padding: 5px;
+}
+
+@media only screen and (min-width: 1200px) {
+	.card-item {
+		width: 180px;
+	}
+}
+
+@media only screen and (max-width: 920px) {
+	.card-item {
+		width: 135px;
+	}
+}
+@media only screen and (max-width: 600px) {
+	.card-item {
+		width: 100%;
+		margin: 5px 0;
+	}
+	.card__wrapper {
+		justify-content: space-between;
+		flex-direction: column;
+	}
 }
