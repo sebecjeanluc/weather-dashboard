@@ -8,6 +8,7 @@ The project involves creating a browser-based weather dashboard that dynamically
 
 - ![HTML]
 - ![CSS]
+- ![Bootstrap]
 - ![JAVASCRIPT]
 - ![DAYJS]
 - ![JQUERY]
@@ -76,6 +77,7 @@ Tak Kawamura - [@\_takuyakawamura](https://twitter.com/_takuyakawamura) - tkawam
 
 [HTML]: https://img.shields.io/badge/HTML-orange
 [CSS]: https://img.shields.io/badge/CSS-blue
+[BOOTSTRAP]: https://img.shields.io/badge/BOOTSTRAP-lightblue
 [JAVASCRIPT]: https://img.shields.io/badge/Javascript-yellow
 [JQUERY]: https://img.shields.io/badge/JQUERY-lightblue
 [DAYJS]: https://img.shields.io/badge/DAYJS-orange
