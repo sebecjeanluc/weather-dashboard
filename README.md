@@ -34,8 +34,8 @@ The project involves creating a browser-based weather dashboard that dynamically
 - [x] Uses the OpenWeather API
 - [x] Add a few validation for search button and error return data
 - [x] LocalStorage to store the search history
-- [] Refator the variable name and logic
-- [] Deploy the app to github page
+- [x] Refator the variable name and logic
+- [x] Deploy the app to github page
 
 ### Mock-up
 
