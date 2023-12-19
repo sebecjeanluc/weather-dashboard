@@ -1,6 +1,6 @@
 const searchInput = $('#search-input')
 const searchButton = $('#search-button')
-const historyDiv = $('#history')
+const historyContainer = $('#history')
 const todaySection = $('#today')
 const forecastSection = $('#forecast')
 
@@ -8,10 +8,10 @@ const forecastSection = $('#forecast')
 // console.log(searchHistoryArray)
 
 // retriving data from local storage
-let storedData = localStorage.getItem('searchHistory')
+let storedSearchHistory = localStorage.getItem('searchHistory')
 let searchHistoryArray = []
-if (storedData) {
-	let searchHistory = JSON.parse(storedData)
+if (storedSearchHistory) {
+	let searchHistory = JSON.parse(storedSearchHistory)
 	searchHistoryArray = searchHistory
 	// console.log(searchHistoryArray)
 	showSearchHistory()
@@ -30,14 +30,13 @@ function showSearchHistory() {
 		buttonElement.attr('class', 'btn btn-secondary my-1')
 		buttonElement.attr('id', searchHistoryArray[i])
 		buttonElement.text(searchHistoryArray[i])
-		historyDiv.prepend(buttonElement)
+		historyContainer.prepend(buttonElement)
 	}
 }
 
 // History button search
-let historyButton = $('#history')
-if (historyButton.length) {
-	historyButton.on('click', 'button', function (event) {
+if (historyContainer.length) {
+	historyContainer.on('click', 'button', function (event) {
 		event.preventDefault()
 		let cityHistoryName = $(this).attr('id')
 		todaySection.empty()
@@ -45,11 +44,11 @@ if (historyButton.length) {
 	})
 }
 
-let warningSearchElement = $('<p>')
-function warningSearch() {
-	warningSearchElement.attr('class', 'warning-text')
-	warningSearchElement.text('Please type a proper city name')
-	$('.hr.weather-hr').before(warningSearchElement)
+let searchWarninghElement = $('<p>')
+function showWarning() {
+	searchWarninghElement.attr('class', 'warning-text')
+	searchWarninghElement.text('Please type a proper city name')
+	$('.hr.weather-hr').before(searchWarninghElement)
 }
 
 // Show search Result
@@ -64,7 +63,7 @@ function showSearchResult(searchValue) {
 
 	city_name = searchValue
 
-	historyDiv.empty()
+	historyContainer.empty()
 	showSearchHistory()
 
 	const api_key = '6564a1e34fe2402a386a344757a44a73'
@@ -137,7 +136,7 @@ function showSearchResult(searchValue) {
 		})
 		// when it returns 404
 		.catch((error) => {
-			warningSearch()
+			showWarning()
 		})
 }
 
@@ -146,10 +145,10 @@ searchButton.on('click', function (event) {
 	let searchValue = searchInput.val().toUpperCase()
 	event.preventDefault()
 	if (searchValue === null || searchValue === '') {
-		warningSearch()
+		showWarning()
 	} else {
 		todaySection.empty()
-		warningSearchElement.empty()
+		searchWarninghElement.empty()
 		showSearchResult(searchValue)
 	}
 })
@@ -200,5 +199,5 @@ function showForecast(cityName, selectedDayData) {
 // Clear local storage and history button
 $('#clear-button').on('click', function () {
 	localStorage.removeItem('searchHistory')
-	historyButton.empty()
+	historyContainer.empty()
 })
