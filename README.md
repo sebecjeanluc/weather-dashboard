@@ -60,6 +60,7 @@ This is a practice for the bootcamp. The starter file is protected by the bootca
 
 ### Third-party service
 
+[Bootstrap](https://getbootstrap.com/)
 [jQuery](https://jquery.com/)
 [day.js](https://day.js.org/)
 [Weather Forecast API](https://openweathermap.org/forecast5)
