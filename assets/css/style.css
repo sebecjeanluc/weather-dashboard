@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+.h3__wrapper {
+	display: flex;
+	align-items: center;
+}
+
+.h3__wrapper h3 {
+	font-weight: bold;
+}
+
+.weather-header {
+	height: 75px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgb(2, 0, 36);
+	background: linear-gradient(
+		321deg,
+		rgba(2, 0, 36, 1) 0%,
+		rgba(9, 9, 121, 1) 35%,
+		rgba(0, 212, 255, 1) 100%
+	);
+}
+
+.weather-header h1 {
+	font-size: 40px;
+	font-weight: bold;
+	color: white;
+}
+
+.weather-search {
+	height: 50px;
+}
+
+.input-group-append {
+	margin: 10px 0;
+}
+
+.search-button {
+	width: 100%;
+}
+
+.clear-button {
+	width: 100%;
+	margin-top: 10px;
+	border: 1px solid gray;
+}
+
+.today__wrapper {
+	border: 1px solid black;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+#forecast h3 {
+	font-size: 18px;
+	padding: 10px 12px;
+}
+
+.card__wrapper {
+	display: flex;
+	justify-content: space-between;
+}
+
+.card-item {
+	display: block;
+	width: 180px;
+	background: rgb(48, 48, 80);
+	color: white;
+	border-radius: 10px;
+	padding: 10px 10px;
+}
+
+.card-item h5 {
+	padding: 5px 0;
+}
+
+.card-item p {
+	padding: 5px 0;
+}
+
+.warning-text {
+	color: red;
+	padding: 5px;
+}

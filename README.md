@@ -15,32 +15,36 @@ The project involves creating a browser-based weather dashboard that dynamically
 
 ### Roadmap
 
-- [] Create a weather dashboard with form inputs for city search.
-- [] Implement functionality to show current and future weather conditions when a city is searched.
-- [] Add searched cities to a search history.
+- [x] Create a weather dashboard with form inputs for city search.
+- [x] Implement functionality to show current and future weather conditions when a city is searched.
+- [x] Add searched cities to a search history.
 - [] Display current weather conditions for the selected city, including:
-  - [] City name
-  - [] Date
-  - [] Icon representing weather conditions
-  - [] Temperature
-  - [] Humidity
-  - [] Wind speed
-- [] Show a 5-day forecast for the selected city, featuring:
-  - [] Date
-  - [] Icon representing weather conditions
-  - [] Temperature
-  - [] Humidity
+  - [x] City name
+  - [x] Date
+  - [x] Icon representing weather conditions
+  - [x] Temperature
+  - [x] Humidity
+  - [x] Wind speed
+- [x] Show a 5-day forecast for the selected city, featuring:
+  - [x] Date
+  - [x] Icon representing weather conditions
+  - [x] Temperature
+  - [x] Humidity
 - [] Enable functionality to click on a city in the search history to view its current and future weather conditions again.
-- [] Uses the OpenWeather API
-- [] localStorage to store the search history
+- [x] Uses the OpenWeather API
+- [x] Add a few validation for search button and error return data
+- [x] LocalStorage to store the search history
+- [] Refator the variable name and logic
+- [] Deploy the app to github page
+- [] After search button, the history button does not work.
 
 ### Mock-up
 
-![The weather app includes a search option, a list of cities, and a five-day forecast and current weather conditions for London.](./assets/images/10-server-side-apis-challenge-demo.png)
+![The weather app includes a search option, a list of cities, and a five-day forecast and current weather conditions for London.](./assets/images/guide/10-server-side-apis-challenge-demo.png)
 
 ### Important note
 
-add later what kind of technical things that been used in this project
+In terms of providing a 5-day weather forecast, one option is to average key data points. However, considering that users of this app do not require detailed weather information, and the app is not intended for in-depth analysis, I decided to opt for simplicity, selecting just one data point from each set of eight, which are collected every three hours, to represent each day's weather. The time is based in London time. and the result do not consider the local time.
 
 ### Preview
 
