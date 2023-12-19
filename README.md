@@ -25,14 +25,18 @@ The project involves creating a browser-based weather dashboard that dynamically
   - [x] Temperature
   - [x] Humidity
   - [x] Wind speed
-- [] Show a 5-day forecast for the selected city, featuring:
-  - [] Date
-  - [] Icon representing weather conditions
-  - [] Temperature
-  - [] Humidity
+- [x] Show a 5-day forecast for the selected city, featuring:
+  - [x] Date
+  - [x] Icon representing weather conditions
+  - [x] Temperature
+  - [x] Humidity
 - [] Enable functionality to click on a city in the search history to view its current and future weather conditions again.
 - [x] Uses the OpenWeather API
-- [] localStorage to store the search history
+- [x] Add a few validation for search button and error return data
+- [x] LocalStorage to store the search history
+- [] Refator the variable name and logic
+- [] Deploy the app to github page
+- [] After search button, the history button does not work.
 
 ### Mock-up
 
@@ -40,7 +44,7 @@ The project involves creating a browser-based weather dashboard that dynamically
 
 ### Important note
 
-add later what kind of technical things that been used in this project
+In terms of providing a 5-day weather forecast, one option is to average key data points. However, considering that users of this app do not require detailed weather information, and the app is not intended for in-depth analysis, I decided to opt for simplicity, selecting just one data point from each set of eight, which are collected every three hours, to represent each day's weather. The time is based in London time. and the result do not consider the local time.
 
 ### Preview
 
